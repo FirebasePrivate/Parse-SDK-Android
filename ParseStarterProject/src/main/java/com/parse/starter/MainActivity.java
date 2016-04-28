@@ -10,10 +10,17 @@ package com.parse.starter;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.parse.Parse;
 import com.parse.ParseAnalytics;
+import com.parse.ParseInstallation;
+import com.parse.ParsePush;
+
+import bolts.Continuation;
+import bolts.Task;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -24,6 +31,8 @@ public class MainActivity extends ActionBarActivity {
     setContentView(R.layout.activity_main);
 
     ParseAnalytics.trackAppOpenedInBackground(getIntent());
+    ParsePush.subscribeInBackground("test_channel");
+    ParsePush.subscribeInBackground("channels-are-topics");
   }
 
   @Override

@@ -9,10 +9,15 @@
 package com.parse.starter;
 
 import android.app.Application;
+import android.util.Log;
 
 import com.parse.Parse;
 import com.parse.ParseACL;
+import com.parse.ParseInstallation;
 import com.parse.ParseUser;
+
+import bolts.Continuation;
+import bolts.Task;
 
 
 public class StarterApplication extends Application {
@@ -23,6 +28,7 @@ public class StarterApplication extends Application {
 
     // Enable Local Datastore.
     Parse.enableLocalDatastore(this);
+    Parse.setLogLevel(Parse.LOG_LEVEL_VERBOSE);
 
     // Add your initialization code here
     Parse.initialize(this);
