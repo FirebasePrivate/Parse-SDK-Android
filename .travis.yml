@@ -10,7 +10,7 @@ android:
     - platform-tools
     - tools
     - build-tools-23.0.3
-    - android-23
+    - android-22
     - doc-23
     - extra-android-support
     - extra-android-m2repository
