@@ -13,11 +13,10 @@ android:
     - android-22
     - doc-23
     - extra-android-support
+    - extra-google-google_play_services
     - extra-android-m2repository
-    - addon-google-google_play_services
+    - extra-google-m2repository
     - addon-google_apis-google-28
-  licenses:
-    - '.+'
 
 before_install:
     - pip install --user codecov
