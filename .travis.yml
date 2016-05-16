@@ -13,14 +13,13 @@ android:
     - android-22
     - doc-23
     - extra-android-support
-    - extra-google-google_play_services
     - extra-android-m2repository
     - extra-google-m2repository
+    - extra-google-google_play_services
     - addon-google_apis-google-28
 
 before_install:
     - pip install --user codecov
-    - ls -R $ANDROID_HOME/extras/google
 
 script:
   - ./gradlew clean testDebugUnitTest jacocoTestReport --info
