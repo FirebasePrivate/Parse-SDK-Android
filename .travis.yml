@@ -20,6 +20,7 @@ android:
 
 before_install:
     - pip install --user codecov
+    - ls -R $ANDROID_HOME/extras/google
 
 script:
   - ./gradlew clean testDebugUnitTest jacocoTestReport --info
